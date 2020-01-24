@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+$base-font:'Oswald', sans-serif;
+$base-button-height: 4vh;
+$base-white-color: rgb(240, 239, 239);
+
+
+body {
+  background-color: black;
+  font-family: $base-font;
+}
+.sourceSelect {
+  // display: none;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  font-family: $base-font;
+  background-color: $base-white-color;
+
+}
+.pageTitle {
+  border-bottom: 2px solid grey;
+  margin-bottom: 1vh;
+}
+.pageTitle h1{
+  text-align: center;
+  font-size: 80px;
+}
+  .selectors {
+    display: flex;
+    justify-content: space-between;
+  } 
+div.buttons {
+  padding: 0;
+  margin: 0;
+}
+  button, select {
+    height: $base-button-height;
+    width: 10vw;
+  }
+  button, select:hover {
+  cursor: pointer;
+  }
+
+  .searchBar {
+    display: flex;
+    margin-top: 2vh;
+    width: 100%;
+  }
+  input {
+    width: 90vw;
+    height: $base-button-height;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .articles{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .card {
+    width: 47%;;
+    margin: 2vh;
+    background-color: $base-white-color;
+  }
+  .card:hover {
+    transform: scale(1.02);
+  }
+  .warning {
+    color: white;
+  }
+
+  @media only screen and (max-width: 942px) {
+  .card {
+    width: 97%;
+  }
+}
