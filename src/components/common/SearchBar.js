@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import {ClickContext, KeyUpContext} from '../../App'
 
-function SearchBar() {
+export default function SearchBar() {
   const onKeyUp = useContext(KeyUpContext)
   const onClick = useContext(ClickContext)
   return (
@@ -11,5 +11,3 @@ function SearchBar() {
     </div>
   )
 }
-
-export default SearchBar

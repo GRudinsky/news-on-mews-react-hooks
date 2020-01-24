@@ -21,16 +21,18 @@ export default function App() {
   const [searchString, setSearchString] = useState('')
   const [searchText, setSearchText] = useState('')
 
+  const setData = (res) => setNews(res.data.articles, setFilteredArticles(res.data.articles, setFilteredSources([...new Set(res.data.articles.map(article => (article.source.name)))])))
+
   useEffect(() =>{
     axios.get(`https://newsapi.org/v2/top-headlines?country=${selectedCountry}&category=${selectedCategory}&apikey=${process.env.REACT_APP_WEBAPI_ACCESS_TOKEN}`)
-      .then(res => setNews(res.data.articles, setFilteredArticles(res.data.articles, setFilteredSources([...new Set(res.data.articles.map(article => (article.source.name)))]))))
+      .then(res => setData(res))
       .catch(err => setErrors(err))
   },[selectedCountry, selectedCategory])
   
   useEffect(() =>{
     searchText !== '' &&
     axios.get(`https://newsapi.org/v2/everything?q=${searchText}&results=100&apikey=${process.env.REACT_APP_WEBAPI_ACCESS_TOKEN}`)
-      .then(res => setNews(res.data.articles, setFilteredArticles(res.data.articles, setFilteredSources([...new Set(res.data.articles.map(article => (article.source.name)))]))))
+      .then(res => setData(res))
       .catch(err => setErrors(err))
   }, [filteredArticles, searchText])
 
@@ -43,8 +45,6 @@ export default function App() {
     const handleTyping = (e) => setSearchString(e.target.value)
     const handleSearch = (e) => setSearchText(searchString)
     const handleSourceChange = (e) => setSelectedSource(e.target.value)
-
-
 
   return (
     <div>
