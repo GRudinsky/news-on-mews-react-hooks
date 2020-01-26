@@ -50,16 +50,16 @@ export default function App() {
     <div>
       <ClickContext.Provider value={handleSearch} >
         <KeyUpContext.Provider value={handleTyping}>
-      <Header
-        filteredArticles = {filteredArticles}
-        selectedCountry = {selectedCountry}
-        handleCountryChange={handleCountryChange}
-        handleCategorySelect={handleCategorySelect}
-        handleTyping={handleTyping}
-        handleSearch = {handleSearch}
-        handleSourceChange = {handleSourceChange}
-        filteredSources = {filteredSources}
-       />
+          <Header
+            filteredArticles = {filteredArticles}
+            selectedCountry = {selectedCountry}
+            handleCountryChange={handleCountryChange}
+            handleCategorySelect={handleCategorySelect}
+            handleTyping={handleTyping}
+            handleSearch = {handleSearch}
+            handleSourceChange = {handleSourceChange}
+            filteredSources = {filteredSources}
+          />
         </KeyUpContext.Provider>
       </ClickContext.Provider>
       <NewsContainer 
