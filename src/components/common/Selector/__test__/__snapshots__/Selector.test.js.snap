@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  <p>
+    countries
+    :
+  </p>,
+  <select
+    className="selector"
+    data-testid="selector"
+  >
+    <option />
+    <option>
+      us
+    </option>
+    <option>
+      gb
+    </option>
+    <option>
+      de
+    </option>
+  </select>,
+]
+`;

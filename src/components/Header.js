@@ -1,8 +1,8 @@
 import React from 'react'
 import PageTitle from './common/PageTitle'
-import Selector from './common/Selector'
+import Selector from './common/Selector/Selector'
 import SearchBar from './common/SearchBar'
-import ButtonBar from './common/ButtonBar'
+import ButtonsBar from './common/ButtonsBar'
 
 export default function Header(props) {
   const categories = ['Business', 'Entertainment', 'General', 'Health', 'Science', 'Sports', 'Technology']
@@ -17,7 +17,7 @@ export default function Header(props) {
           data={props.filteredSources}
           defaultValue={'All'}
         />
-        <ButtonBar
+        <ButtonsBar
           data={categories}
           onClick={props.handleCategorySelect}
           />
