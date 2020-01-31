@@ -2,7 +2,7 @@ import React from 'react'
 import PageTitle from './common/PageTitle'
 import Selector from './common/Selector/Selector'
 import SearchBar from './common/SearchBar'
-import ButtonsBar from './common/ButtonsBar'
+import ButtonsBar from './common/ButtonsBar/ButtonsBar'
 
 export default function Header(props) {
   const categories = ['Business', 'Entertainment', 'General', 'Health', 'Science', 'Sports', 'Technology']

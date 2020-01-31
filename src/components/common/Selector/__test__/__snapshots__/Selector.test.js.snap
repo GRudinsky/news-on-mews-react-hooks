@@ -2,15 +2,18 @@
 
 exports[`matches snapshot 1`] = `
 Array [
-  <p>
-    countries
-    :
+  <p
+    data-testid="title"
+  >
+    countries:
   </p>,
   <select
     className="selector"
     data-testid="selector"
   >
-    <option />
+    <option
+      data-testid="default-value"
+    />
     <option>
       us
     </option>
