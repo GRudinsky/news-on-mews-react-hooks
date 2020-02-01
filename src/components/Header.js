@@ -19,7 +19,7 @@ export default function Header(props) {
         />
         <ButtonsBar
           data={categories}
-          onClick={props.handleCategorySelect}
+          _onClick={props.handleCategorySelect}
           />
         <Selector 
           name={'Country'}

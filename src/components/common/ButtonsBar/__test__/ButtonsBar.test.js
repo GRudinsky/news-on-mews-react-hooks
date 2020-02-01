@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Button from '../../Button/Button'
 import ButtonsBar from '../ButtonsBar'
-import { shallow, mount, render } from 'enzyme'
+import { shallow} from 'enzyme'
 
 const categories=['sports', 'world', 'weather']
 
